@@ -1,0 +1,25 @@
+<div id="row-container">
+    <mdb-card id="row-container">
+        <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Smiley face">
+        <mdb-card-body id="body-container">
+
+            <p>{{name}}</p>
+            <p>{{duration}}</p>
+            <div id='status-container'>
+                <span class="dot" [ngClass]="{
+                    'dot-red' : status == 'Busy',
+                    'dot-green' : status == 'completed',
+                    'dot-yellow' : status == 'overload'}">
+                </span>
+                <p>{{status}}</p>
+            </div>
+            <div id="button-end">
+                <button type="button" class="btn btn-outline-dark btn-sm">view reports</button>
+
+                    <span ><i class="fas fa-ellipsis-v"></i></span>
+
+            </div>
+
+        </mdb-card-body>
+    </mdb-card>
+</div>

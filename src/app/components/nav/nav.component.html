@@ -1,0 +1,26 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg blue-grey lighten-5" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand>Decisions</mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link">1 <mdb-icon fas icon="envelope"></mdb-icon></a>
+        </li>
+        <li class="nav-item avatar dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <img id="profile-img"src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"  class="img-fluid rounded-circle z-depth-0"></a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect>My account</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect (click)="logout()">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->

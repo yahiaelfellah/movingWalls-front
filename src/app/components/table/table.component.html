@@ -1,0 +1,35 @@
+<div>
+    <div id="filters">
+        <mat-form-field>
+            <input [(ngModel)]="searchText" matInput placeholder="Search">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Filter by location" (change)="selected()" [(ngModel)]="selectedLocation">
+                <mat-option *ngFor="let val of locations" [value]="val">{{val}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Filter by compaign date" (change)="selected($event)">
+                <mat-option *ngFor="let val of dates" [value]="val">{{val}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Sorted by" (change)="selected($event)" >
+                <mat-option *ngFor="let val of sort" [value]="val">{{val}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <table mdbTable #tableEl="mdbTable" borderless="true">
+        <div *ngFor="let el of elements;let i = index">
+            <tr mdbTableCol app-tablerow *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex" [name]="el.name" [dateBegin]="el.dateBegin" [dateEnd]="el.dateBegin" [status]="el.status"></tr>
+        </div>
+        <tfoot class="grey lighten-5 w-100">
+            <tr>
+                <td colspan="4">
+                    <mdb-table-pagination [tableEl]="tableEl" [searchDataSource]="elements"></mdb-table-pagination>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+.table{
+    margin: 2px;
+    margin-right: 5px;
+    width: 100%;
+}
+#filters{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;	
+    width: 95%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}

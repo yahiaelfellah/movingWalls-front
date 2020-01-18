@@ -1,0 +1,40 @@
+
+#home-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap row;
+    justify-content: center;
+}
+#content-placeholder{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 85%;
+}
+#sidenav-placeholder{
+    width: 15%;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.btn {
+
+    display: inline-block;
+    font-weight:0;
+    color: black;
+    border-radius: 4.5rem;
+    padding-inline: 5%;
+    font-size: 0.7rem;
+}
+#links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#home-page{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}

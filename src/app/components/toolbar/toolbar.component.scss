@@ -1,0 +1,14 @@
+.toolbar-container{
+    display: flex;
+    justify-content: space-between;
+}
+.mat-card-image:first-child{
+    margin-top: -1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+#profil{
+    display: flex;
+    justify-content: space-around;
+}

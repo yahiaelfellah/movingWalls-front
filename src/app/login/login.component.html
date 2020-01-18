@@ -1,0 +1,46 @@
+<div class="login-container">
+
+
+    <mdb-card>
+
+        <mdb-card-title>
+            <h4>Sign In</h4>
+        </mdb-card-title>
+        <mdb-card-body>
+
+            <div id="form-container">
+                <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+                    <div id="username-form">
+                        <label for="form1">Username</label>
+                        <input type="text" formControlName="username" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                        <mdb-error *ngIf=" f.username.invalid">
+                            <div *ngIf="f.username.errors.required">Username is <strong>required</strong></div>
+                        </mdb-error>
+
+                    </div>
+
+                    <div id="password-form">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" formControlName="password" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                        <mdb-error *ngIf=" f.password.invalid">
+                            <div *ngIf="f.password.errors.required">Username is <strong>required</strong></div>
+                        </mdb-error>
+
+                    </div>
+
+                    <button id="submit-btn" type="submit" rounded="true" mdbBtn color="primary" mdbWavesEffect>Sign
+                        In</button>
+                </form>
+            </div>
+
+
+
+
+        </mdb-card-body>
+    </mdb-card>
+
+
+</div>
